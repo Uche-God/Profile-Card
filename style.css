@@ -1,4 +1,4 @@
-body {
+.body {
   font-family: 'Segoe UI', sans-serif;
   background: off-white;
   margin: 0;
@@ -43,7 +43,7 @@ body {
   margin: 0 8px;
   transition: transform 0.2s;
 }
-social-icons {
+ psocial-icons {
   display: flex;
   justify-content: center;
   gap: 15px;
