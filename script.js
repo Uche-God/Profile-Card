@@ -8,3 +8,8 @@ timezoneDisplay.style.marginTop = '10px';
 
 document.querySelector('.card').appendChild(timezoneDisplay);
 `
+<script>
+  const timezoneElement = document.getElementById("timezone");
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  timezoneElement.textContent = `Your current time zone: ${timeZone}`;
+</script>
