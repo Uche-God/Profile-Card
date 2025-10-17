@@ -58,9 +58,20 @@
 </head>
 <body>
   <div class="card">
-    <div class="card-header">
-      <img src="https://via.placeholder.com/100" alt="Anioke's photo" class="avatar" />
-    </div>
+    div class="card">
+    <img src="Mine.jpg" alt="avatar.png" class="avatar" />
+    <h1>Anioke Uchenna</h1>
+    <p id="milliseconds">Loading...</p>
+
+  <!--  Script goes here, inside the body -->
+  <script>
+    function updateMilliseconds() {
+      const msElement = document.getElementById("milliseconds");
+      msElement.textContent = `Current time in ms: ${Date.now()}`;
+    }
+
+    setInterval(updateMilliseconds, 100);
+  </script
     <div class="card-body">
       <h2>Anioke Uchenna</h2>
       <p>Frontend Developer | Tech Enthusiast</p>
