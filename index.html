@@ -10,12 +10,22 @@
   <div class="card">
     <img src="Mine.jpg" alt="avatar.png" class="avatar" />
     <h1>Anioke Uchenna</h1>
-    <p id="timezone">Current time (ms)....</p>
+    <p id="milliseconds">Loading...</p>
+
+  <!--  Script goes here, inside the body -->
+  <script>
+    function updateMilliseconds() {
+      const msElement = document.getElementById("milliseconds");
+      msElement.textContent = `Current time in ms: ${Date.now()}`;
+    }
+
+    setInterval(updateMilliseconds, 100);
+  </script
     <p class="bio">
       Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving.
     </p>
     <h2>Let's Connect</h2>
-    <div class="social-icons">
+    <nav class="social-icons">
       <a href="https://github.com/uche-god" target="_blank">
   <img src="github-icon.png" alt="GitHub" />
 </a>
@@ -25,6 +35,8 @@
       <a href="https://www.facebook.com/uche.nna.689685" target="_blank">
   <img src="facebook-icon.png" alt="Facebook" />
 </a>
+    </nav>
+
       <a href="aniokeuchenna71@gmail.com"><img src="email-icon.png" alt="Email" /></a>
     <div class="lists">
       <div>
