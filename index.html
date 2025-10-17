@@ -1,71 +1,89 @@
-00<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anioke's Profile Card</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 400px;
+      text-align: center;
+    }
+    .card-header {
+      background: #007BFF; /* Blue background */
+      padding: 2rem 1rem 1rem;
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-top: -50px;
+      background: white;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    h2 {
+      margin: 0.5rem 0;
+    }
+    p {
+      color: #555;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    li {
+      background: #e0f7fa;
+      margin: 0.3rem 0;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
   <div class="card">
-    <img src="Mine.jpg" alt="avatar.png" class="avatar" />
-    <h1>Anioke Uchenna</h1>
-    <p id="milliseconds">Loading...</p>
-
-  <!--  Script goes here, inside the body -->
-  <script>
-    function updateMilliseconds() {
-      const msElement = document.getElementById("milliseconds");
-      msElement.textContent = `Current time in ms: ${Date.now()}`;
-    }
-
-    setInterval(updateMilliseconds, 100);
-  </script
-    <p class="bio">
-      Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving.
-    </p>
-    <h2>Let's Connect</h2>
-    <div class="social-icons">
-      <a href="https://github.com/uche-god" target="_blank">
-  <img src="github-icon.png" alt="GitHub" />
-</a>
-      <a href="https://www.linkedin.com/in/anioke-uchenna-a0a978209" target="_blank">
-  <img src="linkedin.jpg" alt="LinkedIn" />
-</a>
-      <a href="https://www.facebook.com/uche.nna.689685" target="_blank">
-  <img src="facebook-icon.png" alt="Facebook" />
-</a>
- <a href="aniokeuchenna71@gmail.com"><img src="email-icon.png" alt="Email" /></a>
+    <div class="card-header">
+      <img src="https://via.placeholder.com/100" alt="Anioke's photo" class="avatar" />
     </div>
-    <div class="lists">
-      <div>
-        <h3>Hobbies</h3>
-        <ul>
-          <li>Writing code</li>
-          <li>Video games</li>
-          <li>Solving coding puzzles</li>
-          <li>Football</li>
-          <li>Listening to Afrobeats and Trap</li>
-          <li>Exploring new tech</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Dislikes</h3>
-        <ul>
-          <li>Unclear documentation</li>
-          <li>Noise</li>
-          <li>Arguments</li>
-          <li>Poverty</li>
-          <li>Laggy websites</li>
-          <li>Unproductive meetings</li>
-          <li>Spam messages</li>
-        </ul>
-      </div>
+    <div class="card-body">
+      <h2>Anioke Uchenna</h2>
+      <p>Frontend Developer | Tech Enthusiast</p>
+      <p>  Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving</p>
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Reading</li>
+        <li>Watching movies</li>
+        <li>Listening to music</li>
+        <li>Learning new things</li>
+        <li>Exploring new technologies</li>
+        <li>Writing code</li>
+      </ul>
+      <h3>Dislikes</h3>
+      <ul>
+        <li>Dishonesty</li>
+        <li>Procrastination</li>
+        <li>Disrespect</li>
+        <li>Being ignored</li>
+        <li>Unnecessary arguments</li>
+        <li>Negative energy</li>
+      </ul>
     </div>
   </div>
 </body>
 </html>
-`
-`
-
-
