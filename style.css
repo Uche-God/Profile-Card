@@ -15,7 +15,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .card {
-  background: white;
+  background: blue;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 500px;
@@ -59,10 +59,10 @@ social-icons {
 }
 
 .social-icons a img:hover {
-  transform: scale(2.2);
+  transform: scale(1.1);
 }
 .social-icons img:hover {
-  transform: scale(2.2);
+  transform: scale(1.1);
 }
 
 .lists {color: light-blue;
