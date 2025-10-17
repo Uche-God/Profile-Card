@@ -7,7 +7,7 @@ body {
   justify-content: center;
 }
 .profile-card {
-  background: #0000ff;
+  background: blue;
   color: white;
   padding: 30px;
   border-radius: 12px;
