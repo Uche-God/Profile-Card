@@ -43,9 +43,9 @@
       margin: 0.5rem 0;
     }
     p {
-      color: #555;
+      color: blue;
     }
-    .lists {background-color: #7d5dd9;
+    .lists {background-color: skyblue;
             color: black;
       display: flex;
       justify-content: space-between;
@@ -95,6 +95,7 @@
 
   <!--  Script goes here, inside the body -->
   <script>
+    <div class="timezone">
     function updateMilliseconds() {
       const msElement = document.getElementById("milliseconds");
       msElement.textContent = `Current time in ms: ${Date.now()}`;
@@ -102,6 +103,7 @@
 
     setInterval(updateMilliseconds, 100);
   </script
+    </div>
       <p>Frontend Developer | Tech Enthusiast</p>
       <p> Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving </p>
       <div class="lists">
