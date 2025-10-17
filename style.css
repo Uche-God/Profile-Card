@@ -23,7 +23,7 @@ body {
   text-align: center;
 }
 
-.avatar {
+.avatar {background-color: blue;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -37,17 +37,35 @@ body {
   margin-bottom: 20px;
 }
 
+
 .social-icons img {
   width: 30px;
   margin: 0 8px;
   transition: transform 0.2s;
 }
-
-.social-icons img:hover {
-  transform: scale(1.1);
+social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
-.lists {
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(2.2);
+}
+.social-icons img:hover {
+  transform: scale(2.2);
+}
+
+.lists {color: light-blue;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -62,11 +80,11 @@ body {
   list-style: none;
   padding: 0;
   font-size: 14px;
-  color: grey;
+  color: darkgrey;
 }
 `.timezone {
   color: blue;
-  background-color: white;
+  background-color: blue;
   border: 1px solid blue;
   padding: 5px 10px;
   border-radius: 20px;
