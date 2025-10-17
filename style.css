@@ -43,7 +43,7 @@
   margin: 0 8px;
   transition: transform 0.2s;
 }
- psocial-icons {
+ .social-icons {
   display: flex;
   justify-content: center;
   gap: 15px;
