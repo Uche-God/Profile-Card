@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anioke's Profile Card</title>
+  <article data-testid="test-profile-card">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
    body {
@@ -105,9 +105,9 @@
             text-align: center; /* Center content like image/name */
         ">
    <div class="profile-pic">
-     <img src="IMG_3505.PNG" alt="avatar.png" class="avatar" /> 
-     <h1>Anioke Uchenna</h1>
-      <p id="milliseconds">Loading...</p>
+     <img src="IMG_3505.PNG" alt=" avatar.png" data-testid="test-user-avatar" class="avatar"> 
+     <h1 data-testid="test-user-name">Anioke Uchenna</h1>
+      <p data-testid="test-user-time"> "milliseconds">Loading...</p>
      <!--  Script goes here, inside the body -->
   <script>
     function updateMilliseconds() {
@@ -117,7 +117,7 @@
 
     setInterval(updateMilliseconds, 100);
       </script>
-      <div class="tech"><p1>Frontend Developer | Tech Enthusiast 
+      <div class="tech"><p1 data-testid="test-user-bio"> Frontend Developer | Tech Enthusiast 
       <br> Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving </p1></div> 
 </div>
    </div>
@@ -167,6 +167,7 @@
   </div>
   </div>
 </body>
+  </article>
 </html>
   
      
