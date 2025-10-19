@@ -6,55 +6,52 @@
   <title>Anioke's Profile Card</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #121212;
+   body {
+      font-family: 'Sora', serif;
+      background: #8F73F2;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin-top: 150px;
+      margin-bottom: 150px;
     }
-    .card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      max-width: 500px;
-      text-align: center;
-    }
-    .card-header {
-      background:#1a1a1a;
-      padding: 2rem 1rem 1rem;
-    }
+    
     .avatar {
       width: 100px;
       height: 100px;
       border-radius: 100%;
       object-fit: cover;
-      border: 4px solid white;
+      border: 4px solid #E7E4F7;
       margin-top: 50px;
-      background: #ffffff;
     }
-    .card-body {
-      padding: 1.5rem;
+    
+    h1 {
+      color: #E7E4F7;
+       }
+    h4 { color:#20284b;
+      text-align: center;}
+    p1 { 
+      color: #E7E4F7;
+      font-size: 14px;
+      font-weight: light;
     }
-    h1 {color: #ffffff;}
-    h2 {color: #ffffff;
-      margin: 0.5rem 0;
-    }
-    h3 { color: #ffffff;}
-
+    
     p {
-      color: #ffffff;
-    }
-    .lists {background-color: #1a1a1a;
-            color: ffffff;
+      color: #E7E4F7;
+      padding: 0.5rem;
+      text-align: inherit;
+     }
+      
+   .lists {
+       color: #20284B;
       display: flex;
       justify-content: space-between;
       gap: 1rem;
       margin-top: 1rem;
       text-align: left;
     }
+    
     .list-section {
       flex: 1;
     }
@@ -65,38 +62,53 @@
       list-style: none;
       padding: 0;
     }
+    
     li {
-      background: #121212;
-      color: #ffffff;
-      margin: 0.3rem 0;
-      padding: 0.5rem;
-      border-radius: 6px;
-    }
+      background: #DED9F6;
+      color: #20284b;
+      margin: 0.6rem 0;
+      padding: 1rem;
+      border-radius: 4px;
+      font-weight: light;
+      font-size: 14px;
+      }
+    
     .social-icons {
       margin-top: 1.5rem;
     }
     .social-icons a {
       margin: 0 10px;
-      color: #007BFF;
+      color: #20284b;
       font-size: 1.5rem;
       text-decoration: none;
       transition: color 0.3s;
+      align-items: center;
     }
     .social-icons a:hover {
-      color: #0056b3;
+      color: #ded9f6;
     }
-    
+    .socials{ text-align: center;}
+   
   </style>
 </head>
+  
 <body>
-  <div class="card">
-    <div class="card-header">
-   <img src="IMG_3505.PNG" alt="avatar.png" class="avatar" /> 
-    <div class="card-body">
-      <h1>Anioke Uchenna</h1>
+ <div class="backgroundcard">
+   <div class="profile-card" 
+        style="
+            background-color: #20284B; 
+            padding: 30px; 
+            border-radius: 12px 12px 0px 0; 
+            width: 400px; 
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+            border: 1px solid #20284B; /* Subtle border for definition */
+            text-align: center; /* Center content like image/name */
+        ">
+   <div class="profile-pic">
+     <img src="IMG_3505.PNG" alt="avatar.png" class="avatar" /> 
+     <h1>Anioke Uchenna</h1>
       <p id="milliseconds">Loading...</p>
-
-  <!--  Script goes here, inside the body -->
+     <!--  Script goes here, inside the body -->
   <script>
     function updateMilliseconds() {
       const msElement = document.getElementById("milliseconds");
@@ -104,12 +116,25 @@
     }
 
     setInterval(updateMilliseconds, 100);
-  </script
-      <p>Frontend Developer | Tech Enthusiast</p>
-    <p>Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving </p>
-      <div class="lists">
+      </script>
+      <div class="tech"><p1>Frontend Developer | Tech Enthusiast 
+      <br> Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving </p1></div> 
+</div>
+   </div>
+     
+<div class="hobby-card" 
+        style="
+            background-color: #E7E4F7; 
+            padding: 30px; 
+            border-radius: 0px 0px 12px 12px; 
+            width: 400px; 
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+            border: 1px solid #e0e0e0; /* Subtle border for definition */
+            text-align: left; /* Center content like image/name */
+        ">
+        <div class="lists">
         <div class="list-section">
-          <h3>Hobbies</h3>
+          <h3>❤️ Hobbies</h3>
           <ul>
             <li>Reading</li>
             <li>Watching movies</li>
@@ -120,7 +145,7 @@
           </ul>
         </div>
         <div class="list-section">
-          <h3>Dislikes</h3>
+          <h3>👎 Dislikes</h3>
           <ul>
             <li>Dishonesty</li>
             <li>Procrastination</li>
@@ -130,15 +155,18 @@
             <li>Negative energy</li>
           </ul>
         </div>
-      </div>
-      <h2>Let's Connect</h2>
-<div class="social-icons">
+        </div>
+        <h4>Let's Connect</h4>
+      <div class="socials">
+        <div class="social-icons">
         <a href="https://github.com/uche-god" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/anioke-uchenna-a0a978209" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.facebook.com/uche.nna.689685" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
+          <a href="mailto:aniokeuchenna71@gmail.com"><i class="fas              fa-envelope"></i></a></div>
+  </div>
+  </div>
   </div>
 </body>
 </html>
+  
+     
