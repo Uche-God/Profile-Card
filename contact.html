@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="contactForm" novalidate>
+      <div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" data-testid="test-contact-name" required aria-describedby="error-name">
+        <p id="error-name" class="error" data-testid="test-contact-error-name"></p>
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" data-testid="test-contact-email" required aria-describedby="error-email">
+        <p id="error-email" class="error" data-testid="test-contact-error-email"></p>
+      </div>
+
+      <div>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" data-testid="test-contact-subject" required aria-describedby="error-subject">
+        <p id="error-subject" class="error" data-testid="test-contact-error-subject"></p>
+      </div>
+
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" data-testid="test-contact-message" required aria-describedby="error-message"></textarea>
+        <p id="error-message" class="error" data-testid="test-contact-error-message"></p>
+      </div>
+
+      <button type="submit" data-testid="test-contact-submit">Submit</button>
+    </form>
+
+    <p id="success-message" class="success" data-testid="test-contact-success" hidden>
+      ✅ Thank you! Your message has been sent successfully.
+    </p>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
