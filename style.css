@@ -241,3 +241,35 @@ button[type="submit"]:hover {
 .social-icons a:hover {
   color: #8F73F2;
 }
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: none;
+  text-align: center;
+  padding: 0;
+}
+
+nav ul.active {
+  display: block;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: #E7E4F7;
+  text-decoration: none;
+}
+
