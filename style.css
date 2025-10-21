@@ -272,4 +272,115 @@ nav ul li a {
   color: #E7E4F7;
   text-decoration: none;
 }
+/* 🔹 Hamburger Icon Style */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: #E7E4F7;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* 🔹 Hidden Menu (Initially Invisible) */
+.nav-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 25px;
+  background: #E7E4F7;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* Menu List Style */
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-menu li:last-child {
+  border-bottom: none;
+}
+
+.nav-menu a {
+  color: #20284B;
+  text-decoration: none;
+  display: block;
+  padding: 12px 20px;
+  font-weight:  100;
+}
+
+.nav-menu a:hover {
+  background: #20284B;
+  color: #E7E4F7;
+}
+
+/* 🔹 Show Menu When Active */
+.nav-menu.active {
+  display: block;
+}
+/* === HAMBURGER MENU === */
+
+/* Hide nav by default */
+#nav-links {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #20284B;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Show when active */
+#nav-links.active {
+  display: block;
+}
+
+/* Nav Links */
+#nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links li {
+  margin: 10px 0;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: #E7E4F7;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+#nav-links a:hover {
+  color: #8F73F2;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #E7E4F7;
+  cursor: pointer;
+  z-index: 1000;
+}
+
 
