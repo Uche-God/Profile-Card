@@ -46,12 +46,11 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-// Hamburger menu functionality (hidden — but included if needed later)
+// Toggle hamburger menu
 const menuBtn = document.getElementById('menu-btn');
 const navLinks = document.getElementById('nav-links');
 
-if (menuBtn) {
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-}
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
