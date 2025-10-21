@@ -1,44 +1,57 @@
-const form = document.getElementById("contactForm");
-const successMessage = document.getElementById("success-message");
+// Form validation and success message
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('success-message');
 
-form.addEventListener("submit", function (e) {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Clear old messages
-  document.querySelectorAll(".error").forEach(el => el.textContent = "");
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
 
   let valid = true;
 
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
-  const subject = document.getElementById("subject");
-  const message = document.getElementById("message");
+  // Simple validation
+  document.querySelectorAll('.error').forEach(err => err.textContent = '');
 
-  if (name.value.trim() === "") {
-    document.getElementById("error-name").textContent = "Full name is required.";
+  if (!name) {
+    document.getElementById('error-name').textContent = 'Full name is required.';
     valid = false;
   }
 
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (!emailPattern.test(email.value.trim())) {
-    document.getElementById("error-email").textContent = "Please enter a valid email address.";
+  if (!email || !/\S+@\S+\.\S+/.test(email)) {
+    document.getElementById('error-email').textContent = 'Enter a valid email.';
     valid = false;
   }
 
-  if (subject.value.trim() === "") {
-    document.getElementById("error-subject").textContent = "Subject is required.";
+  if (!subject) {
+    document.getElementById('error-subject').textContent = 'Subject is required.';
     valid = false;
   }
 
-  if (message.value.trim().length < 10) {
-    document.getElementById("error-message").textContent = "Message must be at least 10 characters.";
+  if (!message) {
+    document.getElementById('error-message').textContent = 'Message is required.';
     valid = false;
   }
 
   if (valid) {
-    form.reset();
     successMessage.hidden = false;
-  } else {
-    successMessage.hidden = true;
+    form.reset();
+
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+      successMessage.hidden = true;
+    }, 3000);
   }
 });
+
+// Hamburger menu functionality (hidden — but included if needed later)
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.getElementById('nav-links');
+
+if (menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
