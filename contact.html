@@ -6,6 +6,135 @@
   <title>Contact Us</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <style>
+  /* === General Body === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #8F73F2;
+  color: #222;
+}
+
+/* === Header === */
+header {
+  background-color: #8F73F2;
+  color: #fff;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+h2 { color:#20284b;
+font-weight: 200px;
+font-size: inherit;}
+
+header h1 {
+  margin: 0;
+  color: #20284b;
+  font-size: 20px;
+}
+
+/* === Hamburger Menu Button === */
+.menu-btn {
+  background: none;
+  border: none;
+  color: #20284b;
+  font-size: 33px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+}
+
+/* === Nav Links (Hidden by default) === */
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 25px;
+  background-color: #20284B;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links ul li {
+  margin: 10px 0;
+}
+
+.nav-links ul li a {
+  color: #E7E4F7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #777;
+}
+
+/* === Show menu when active === */
+.nav-links.active {
+  display: block;
+}
+
+/* === Card Body === */
+.card-body {
+  background-color: #DED9F6;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  color: #20284B;
+}
+
+.card-body h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #20284B;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #20284B;
+  margin-bottom: 13px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background-color: #fff;
+  color: #333;
+}
+
+button[type="submit"] {
+  background-color:#20284B;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #777;
+}
+</style>
 <body>
   <header>
     <h1>Contact Us</h1>
