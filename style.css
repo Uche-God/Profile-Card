@@ -1,15 +1,23 @@
-/* === General Body === */
-body {
+/* ================================
+   🌐 Global Styles (Applied Everywhere)
+=================================== */
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color:  #8F73F2;
-  color: #222;
+  padding: 0;
 }
 
-/* === Header === */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #8F73F2;
+  color: #20284B;
+  min-height: 100vh;
+}
+
+/* === Header & Navbar === */
 header {
-  background-color: #8f73f2;
-  color: #fff;
+  background-color: #8F73F2;
   padding: 25px 40px;
   display: flex;
   justify-content: space-between;
@@ -18,69 +26,71 @@ header {
 }
 
 header h1 {
-  margin: 0;
-  color: #20284b;
-  font-size: 20px;
+  font-size: 22px;
+  color: #20284B;
 }
 
-/* === Hamburger Menu Button === */
+/* === Hamburger Menu === */
 .menu-btn {
   background: none;
   border: none;
-  color: #20284b;
+  color: #20284B;
   font-size: 33px;
   cursor: pointer;
   display: block;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
 }
 
 /* === Nav Links (Hidden by default) === */
 .nav-links {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  box-shadow: 0 0px 0px rgba(0,0,0,0.3);
-  padding: 15px;
+  top: 70px;
+  right: 25px;
+  background-color: #20284B;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-links ul li {
   margin: 10px 0;
-  text-align: right;
 }
 
 .nav-links ul li a {
-  color: #ff3b3b;
+  color: #E7E4F7;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .nav-links ul li a:hover {
-  color: #333;
+  color: #ff3b3b;
 }
 
-/* === Show menu when active === */
+/* === Show Menu when active === */
 .nav-links.active {
   display: block;
 }
 
-/* === Card Body === */
+/* ================================
+   🧾 Contact Page Styling
+=================================== */
+
 .card-body {
   background-color: #DED9F6;
   max-width: 700px;
-  margin: 50px auto;
+  margin: 60px auto;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-  color: #20284B;;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-body h2 {
@@ -89,27 +99,35 @@ header h1 {
   color: #20284B;
 }
 
+/* Form Labels & Inputs */
 label {
   display: block;
   font-weight: 600;
   color: #20284B;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 
 input, textarea {
   width: 100%;
   padding: 14px;
-  border: none; solid ;
+  border: none;
   border-radius: 9px;
   background-color: #fff;
   color: #333;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
 }
 
 button[type="submit"] {
-  background-color:#20284B;
+  background-color: #20284B;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -117,4 +135,109 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #777;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.success {
+  text-align: center;
+  color: green;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ================================
+   💼 About Me Page Styling
+=================================== */
+
+/* Profile Card */
+.profile-card {
+  background-color: #20284B;
+  padding: 30px;
+  border-radius: 12px 12px 0 0;
+  width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #20284B;
+  text-align: center;
+  margin: 50px auto 0;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid #E7E4F7;
+  margin-top: 30px;
+}
+
+.profile-card h1 {
+  color: #E7E4F7;
+  margin: 10px 0;
+}
+
+.profile-card p {
+  color: #E7E4F7;
+  font-size: 14px;
+  padding: 0.5rem;
+}
+
+/* Hobby Card */
+.hobby-card {
+  background-color: #E7E4F7;
+  padding: 30px;
+  border-radius: 0 0 12px 12px;
+  width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.list-section h3 {
+  margin-bottom: 0.5rem;
+  color: #20284B;
+}
+
+.list-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-section li {
+  background: #DED9F6;
+  color: #20284B;
+  margin: 0.6rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Social Icons */
+.socials {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #20284B;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #8F73F2;
 }
