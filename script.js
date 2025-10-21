@@ -52,12 +52,4 @@ if (menuBtn && navLinks) {
     navLinks.classList.toggle('active');
   });
 }
-
-// ================================
-// 🧑 About Page Feature (Optional)
-// ================================
-// Example: Maybe later you add an animation or skill progress bar on the About page
-const aboutSection = document.querySelector('.about-section');
-if (aboutSection) {
-  console.log('About page loaded successfully!');
 }
