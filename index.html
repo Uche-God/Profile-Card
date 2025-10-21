@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anioke's Profile Card</title>
-<link rel="stylesheet" href="css/style.css">
-<style>
-   body {
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
       font-family: 'Sora', serif;
       background: #8F73F2;
       display: flex;
@@ -16,7 +17,6 @@
       margin-top: 150px;
       margin-bottom: 150px;
     }
-    
     .avatar {
       width: 100px;
       height: 100px;
@@ -25,44 +25,21 @@
       border: 4px solid #E7E4F7;
       margin-top: 50px;
     }
-    
-    h1 {
-      color: #E7E4F7;
-       }
-    h4 { color:#20284b;
-      text-align: center;}
-    p1 { 
-      color: #E7E4F7;
-      font-size: 14px;
-      font-weight: light;
-    }
-    
-    p {
-      color: #E7E4F7;
-      padding: 0.5rem;
-      text-align: inherit;
-     }
-      
-   .lists {
-       color: #20284B;
+    h1 { color: #E7E4F7; }
+    h4 { color:#20284b; text-align: center; }
+    p1 { color: #E7E4F7; font-size: 14px; font-weight: light; }
+    p { color: #E7E4F7; padding: 0.5rem; text-align: inherit; }
+    .lists {
+      color: #20284B;
       display: flex;
       justify-content: space-between;
       gap: 1rem;
       margin-top: 1rem;
       text-align: left;
     }
-    
-    .list-section {
-      flex: 1;
-    }
-    .list-section h3 {
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    
+    .list-section { flex: 1; }
+    .list-section h3 { margin-bottom: 0.5rem; }
+    ul { list-style: none; padding: 0; }
     li {
       background: #DED9F6;
       color: #20284b;
@@ -71,11 +48,8 @@
       border-radius: 4px;
       font-weight: light;
       font-size: 14px;
-      }
-    
-    .social-icons {
-      margin-top: 1.5rem;
     }
+    .social-icons { margin-top: 1.5rem; }
     .social-icons a {
       margin: 0 10px;
       color: #20284b;
@@ -84,62 +58,67 @@
       transition: color 0.3s;
       align-items: center;
     }
-    .social-icons a:hover {
-      color: #ded9f6;
-    }
-    .socials{ text-align: center;}
-   
+    .social-icons a:hover { color: #ded9f6; }
+    .socials{ text-align: center; }
   </style>
 </head>
   
 <body>
- <div class="backgroundcard">
-   <div class="profile-card" 
-        style="
-            background-color: #20284B; 
-            padding: 30px; 
-            border-radius: 12px 12px 0px 0; 
-            width: 400px; 
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
-            border: 1px solid #20284B; /* Subtle border for definition */
-            text-align: center; /* Center content like image/name */
-        ">
-   <div class="profile-pic">
-     <img src="IMG_3505.PNG" alt="avatar.png" class="avatar" /> 
-     <h1>Anioke Uchenna</h1>
-      <p id="milliseconds">Loading...</p>
-     <!--  Script goes here, inside the body -->
-  <script>
-    function updateMilliseconds() {
-      const msElement = document.getElementById("milliseconds");
-      msElement.textContent = `Current time in ms: ${Date.now()}`;
-    }
+  <div class="backgroundcard">
+    <div class="profile-card" 
+      style="
+        background-color: #20284B; 
+        padding: 30px; 
+        border-radius: 12px 12px 0px 0; 
+        width: 400px; 
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+        border: 1px solid #20284B;
+        text-align: center;
+      ">
+      <div class="profile-pic">
+        <img src="IMG_3505.PNG" alt="avatar.png" class="avatar" /> 
+        <h1>Anioke Uchenna</h1>
+        <p id="milliseconds">Loading...</p>
+        <script>
+          function updateMilliseconds() {
+            const msElement = document.getElementById("milliseconds");
+            msElement.textContent = `Current time in ms: ${Date.now()}`;
+          }
+          setInterval(updateMilliseconds, 100);
+        </script>
+        <div class="tech">
+          <p1>
+            Frontend Developer | Tech Enthusiast 
+            <br> Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving
+          </p1>
+        </div> 
+      </div>
+    </div>
 
-    setInterval(updateMilliseconds, 100);
-      </script>
-      <div class="tech"><p1>Frontend Developer | Tech Enthusiast 
-      <br> Creative thinker with a passion for turning ideas into interactive experiences, craft web solutions that are not just functional but unforgettable. Always learning, always evolving </p1></div> 
-</div>
-   </div>
-   
-   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Me</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-</nav>  
-<div class="hobby-card" 
-        style="
-            background-color: #E7E4F7; 
-            padding: 30px; 
-            border-radius: 0px 0px 12px 12px; 
-            width: 400px; 
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
-            border: 1px solid #e0e0e0; /* Subtle border for definition */
-            text-align: left; /* Center content like image/name */
-        ">
-        <div class="lists">
+    <!-- ✅ Hamburger menu button (top-right corner) -->
+    <button id="menu-btn" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>  
+
+    <div class="hobby-card" 
+      style="
+        background-color: #E7E4F7; 
+        padding: 30px; 
+        border-radius: 0px 0px 12px 12px; 
+        width: 400px; 
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); 
+        border: 1px solid #e0e0e0;
+        text-align: left;
+      ">
+      <div class="lists">
         <div class="list-section">
           <h3>❤️ Hobbies</h3>
           <ul>
@@ -162,19 +141,18 @@
             <li>Negative energy</li>
           </ul>
         </div>
-        </div>
-        <h4>Let's Connect</h4>
+      </div>
+      <h4>Let's Connect</h4>
       <div class="socials">
         <div class="social-icons">
-        <a href="https://github.com/uche-god" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/anioke-uchenna-a0a978209" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/uche.nna.689685" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="mailto:aniokeuchenna71@gmail.com"><i class="fas              fa-envelope"></i></a></div>
-  </div>
-  </div>
+          <a href="https://github.com/uche-god" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/anioke-uchenna-a0a978209" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/uche.nna.689685" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="mailto:aniokeuchenna71@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/script.js" defer></script>
 </body>
 </html>
-  
-     
