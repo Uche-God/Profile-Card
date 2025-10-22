@@ -1,222 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* === General Body === */
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background-color: #8F73F2;
-      color: #222;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  /* === Body === */
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #8F73F2;
+    color: #222;
+  }
 
-    /* === Header === */
-    header {
-      background-color: #8F73F2;
-      color: #fff;
-      padding: 25px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
+  /* === Header === */
+  header {
+    background-color: #8F73F2;
+    color: #fff;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
 
-    header h1 {
-      margin: 0px;
-      color: #20284b;
-      font-size: 20px;
-    }
-    h2 { font-weight: 200; }
+  header h1 {
+    margin: 0;
+    color: #20284B;
+    font-size: 20px;
+  }
 
-    /* === Hamburger Button with bars === */
-    .menu-btn {
-      width: 30px;
-      height: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 1000;
-    }
+  h2 { font-weight: 200; }
 
-    .menu-btn .bar {
-      height: 4px;
-      width: 100%;
-      background-color: #20284B;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
+  /* === Hamburger Button === */
+  .menu-btn {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
 
-    .menu-btn.active .bar:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
+  .menu-btn .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #20284B;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
 
-    .menu-btn.active .bar:nth-child(2) {
-      opacity: 0;
-    }
+  .menu-btn.active .bar:nth-child(1){ transform: rotate(45deg) translate(5px,5px); }
+  .menu-btn.active .bar:nth-child(2){ opacity: 0; }
+  .menu-btn.active .bar:nth-child(3){ transform: rotate(-45deg) translate(6px,-6px); }
 
-    .menu-btn.active .bar:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
+  /* === Navigation Menu === */
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    background-color: #20284B;
+    border-radius: 10px;
+    padding: 0 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    z-index: 999;
+  }
 
-    /* === Navigation Menu === */
-    .nav-links {
-      max-height: 0;
-      overflow: hidden;
-      position: absolute;
-      top: 70px;
-      right: 25px;
-      background-color: #20284B;
-      border-radius: 10px;
-      padding: 0 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-      z-index: 999;
-    }
+  .nav-links.active {
+    max-height: 500px;
+    padding: 10px 20px;
+    animation: fadeIn 0.3s ease forwards;
+  }
 
-    .nav-links.active {
-      max-height: 500px;
-      padding: 10px 20px;
-      animation: fadeIn 0.3s ease forwards;
-    }
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-    .nav-links ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+  .nav-links ul li {
+    margin: 10px 0;
+  }
 
-    .nav-links ul li {
-      margin: 10px 0;
-    }
+  .nav-links ul li a {
+    color: #E7E4F7;
+    text-decoration: none;
+    font-weight: 200;
+    transition: color 0.3s ease;
+  }
 
-    .nav-links ul li a {
-      color: #E7E4F7;
-      text-decoration: none;
-      font-weight: 200;
-      transition: color 0.3s ease;
-    }
+  .nav-links ul li a:hover{ color: #8F73F2; }
 
-    .nav-links ul li a:hover {
-      color: #8F73F2;
-    }
+  @keyframes fadeIn {
+    0% { opacity:0; transform:translateY(-10px); }
+    100% { opacity:1; transform:translateY(0); }
+  }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+  /* === Card Body === */
+  .card-body {
+    background-color: #DED9F6;
+    max-width: 600px;   /* limit card width for better balance */
+    margin: 40px auto;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.1);
+    color: #20284B;
+    box-sizing: border-box;
+  }
 
-    /* === Card Body === */
-    .card-body {
-      background-color: #DED9F6;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
-      color: #20284B;
-    }
+  .card-body h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #20284B;
+  }
 
-    .card-body h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #20284B;
-    }
+  /* === Form Labels & Inputs === */
+  label {
+    display: block;
+    font-weight: 500;
+    color: #20284B;
+    margin-bottom: 8px;
+  }
 
-    /* === Form Labels & Inputs Balanced === */
-    label {
-      display: block;
-      font-weight: 500;       /* slightly bolder for readability */
-      color: #20284B;
-      margin-bottom: 8px;     /* reduced spacing for balance */
-    }
+  input, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 9px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 18px;
+    box-sizing: border-box; /* ensures padding fits inside width */
+    font-size: 14px;
+  }
 
-    input, textarea {
-      width: 100%;
-      padding: 12px 14px;     /* smaller padding for proportion */
-      border: none;
-      border-radius: 9px;
-      background-color: #fff;
-      color: #333;
-      margin-bottom: 18px;    /* spacing between fields */
-      box-sizing: border-box;
-      font-size: 14px;
-    }
+  textarea {
+    resize: vertical; /* allows vertical resizing only */
+    min-height: 100px;
+  }
 
-    button[type="submit"] {
-      background-color: #20284B;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+  button[type="submit"] {
+    background-color: #20284B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-    button[type="submit"]:hover {
-      background-color:  #8F73F2;
-    }
-  </style>
+  button[type="submit"]:hover{ background-color: #8F73F2; }
+
+</style>
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
 
-    <!-- Hamburger Button -->
-    <button class="menu-btn" id="menu-btn">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+<header>
+  <h1>Contact Us</h1>
 
-    <!-- Navigation Menu -->
-    <nav class="nav-links" id="nav-links">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Hamburger Button -->
+  <button class="menu-btn" id="menu-btn">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-  <div class="card-body">
-    <h2>Send Us Message</h2>
-    <form id="contactForm">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required>
-      
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
-     
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" placeholder="Enter your subject" required>
-      
-      <label for="message">Message</label>
-      <textarea id="message" placeholder="Write something..." required></textarea>
+  <!-- Navigation Menu -->
+  <nav class="nav-links" id="nav-links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <button type="submit">Submit</button>
-    </form>
+<div class="card-body">
+  <h2>Send Us Message</h2>
+  <form id="contactForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required>
+   
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" placeholder="Enter your subject" required>
+    
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Write something..." required></textarea>
 
-    <p id="success-message" class="success" hidden>
-      ✅ Thank you! Your message has been sent successfully.
-    </p>
-  </div>
+    <button type="submit">Submit</button>
+  </form>
 
-  <!-- JS for hamburger toggle -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const navLinks = document.getElementById('nav-links');
+  <p id="success-message" class="success" style="display:none;">✅ Thank you! Your message has been sent successfully.</p>
+</div>
 
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      menuBtn.classList.toggle('active'); // animate hamburger to X
-    });
-  </script>
+<script>
+  // Hamburger toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+  });
+
+  // Form submission handling
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('success-message');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    successMessage.style.display = 'block';
+    form.reset();
+  });
+</script>
+
 </body>
 </html>
