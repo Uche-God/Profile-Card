@@ -106,11 +106,11 @@
   /* === Card Body === */
   .card-body {
     background-color: #DED9F6;
-    max-width: 600px;   /* limit card width for better balance */
+    max-width: 900px;   /* increased width */
     margin: 40px auto;
-    padding: 28px;
+    padding: 40px;      /* more space for balance */
     border-radius: 12px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     color: #20284B;
     box-sizing: border-box;
   }
@@ -137,12 +137,12 @@
     background-color: #fff;
     color: #333;
     margin-bottom: 18px;
-    box-sizing: border-box; /* ensures padding fits inside width */
+    box-sizing: border-box;
     font-size: 14px;
   }
 
   textarea {
-    resize: vertical; /* allows vertical resizing only */
+    resize: vertical;
     min-height: 100px;
   }
 
@@ -150,13 +150,21 @@
     background-color: #20284B;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 15px;
   }
 
-  button[type="submit"]:hover{ background-color: #001F3F;}
+  button[type="submit"]:hover{ background-color: #001F3F; }
+
+  /* === Responsive Adjustment === */
+  @media (min-width: 1200px) {
+    .card-body {
+      max-width: 1000px;
+    }
+  }
 
 </style>
 </head>
@@ -183,7 +191,7 @@
 </header>
 
 <div class="card-body">
-  <h2>Send Us Message</h2>
+  <h2>Send Us a Message</h2>
   <form id="contactForm">
     <label for="name">Full Name</label>
     <input type="text" id="name" placeholder="Enter your name" required>
@@ -192,7 +200,8 @@
     <input type="email" id="email" placeholder="Enter your email" required>
    
     <label for="subject">Subject</label>
-    <input type="text" id="subject" placeholder="Enter your subject" required>
+    <input typ
+      e="text" id="subject" placeholder="Enter your subject" required>
     
     <label for="message">Message</label>
     <textarea id="message" placeholder="Write something..." required></textarea>
