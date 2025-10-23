@@ -127,3 +127,48 @@ form textarea {
 
 button[type="submit"] {
   background-color: #20284B;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #DED9F6;
+  color: #20284B;
+  border: 1px solid #20284B;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #20284B;
+  padding: 20px;
+  background: #DED9F6;
+  border-top: 1px solid #20284B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .card-body {
+    margin: 80px 10px;
+    padding: 20px;
+  }
+}
