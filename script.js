@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Toggle Navigation Menu
+document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menu-btn");
   const navLinks = document.getElementById("nav-links");
 
@@ -10,58 +9,48 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Contact Form Validation
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", function(e) {
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const name = document.getElementById("contact-name");
-      const email = document.getElementById("contact-email");
-      const subject = document.getElementById("contact-subject");
-      const message = document.getElementById("contact-message");
-      const successMsg = document.getElementById("contact-success");
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const subject = document.getElementById("subject");
+      const message = document.getElementById("message");
+      const successMsg = document.getElementById("test-contact-success");
 
-      let isValid = true;
+      let valid = true;
 
-      // Helper to show error
-      const showError = (id, msg) => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = msg;
-      };
+      // Reset all errors
+      document.querySelectorAll(".error").forEach((el) => (el.textContent = ""));
 
-      // Clear previous errors
-      document.querySelectorAll(".error").forEach(el => el.textContent = "");
-
-      // Validation
       if (!name.value.trim()) {
-        showError("test-contact-error-name", "Full name is required.");
-        isValid = false;
-      }
-      if (!email.value.trim()) {
-        showError("test-contact-error-email", "Email is required.");
-        isValid = false;
-      } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)) {
-        showError("test-contact-error-email", "Enter a valid email address.");
-        isValid = false;
-      }
-      if (!subject.value.trim()) {
-        showError("test-contact-error-subject", "Subject is required.");
-        isValid = false;
-      }
-      if (!message.value.trim()) {
-        showError("test-contact-error-message", "Message is required.");
-        isValid = false;
-      } else if (message.value.trim().length < 10) {
-        showError("test-contact-error-message", "Message must be at least 10 characters.");
-        isValid = false;
+        document.getElementById("test-contact-error-name").textContent = "Full name is required.";
+        valid = false;
       }
 
-      if (isValid) {
-        successMsg.textContent = "Your message has been sent successfully!";
-        form.reset();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email.value)) {
+        document.getElementById("test-contact-error-email").textContent = "Enter a valid email address.";
+        valid = false;
+      }
+
+      if (!subject.value.trim()) {
+        document.getElementById("test-contact-error-subject").textContent = "Subject is required.";
+        valid = false;
+      }
+
+      if (message.value.trim().length < 10) {
+        document.getElementById("test-contact-error-message").textContent = "Message must be at least 10 characters.";
+        valid = false;
+      }
+
+      if (valid) {
+        successMsg.style.display = "block";
+        contactForm.reset();
       } else {
-        successMsg.textContent = "";
+        successMsg.style.display = "none";
       }
     });
   }
