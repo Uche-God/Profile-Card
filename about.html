@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,67 +6,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <h1>About Me</h1>
+    <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-<header>
-  <h1>About Me</h1>
-  <button class="menu-btn" id="menu-btn">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav class="nav-links" id="nav-links">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
+  <main class="card-body" data-testid="test-about-page">
+    <section data-testid="test-about-bio">
+      <h2>Bio</h2>
+      <p>I'm Anioke Uchenna, a creative Frontend Developer who enjoys turning ideas into smooth, responsive, and visually amazing web experiences.</p>
+      <p>I love exploring modern web technologies, UI/UX design, and finding better ways to make the web more interactive and enjoyable.</p>
+      <p>My journey began with curiosity for how websites work. Now I build with HTML, CSS, JavaScript, and React — always eager to learn and create something exceptional.</p>
+    </section>
 
-<main class="card-body">
-  <section>
-    <h2>Bio</h2>
-    <p>I'm Anioke Uchenna, a creative Frontend Developer who enjoys turning ideas into smooth, responsive, and visually amazing web experiences.</p>
-    <p>I love exploring modern web technologies, UI/UX design, and finding better ways to make the web more interactive and enjoyable.</p>
-    <p>My journey began with curiosity for how websites work. Now I build with HTML, CSS, JavaScript, and React — always eager to learn and create something exceptional.</p>
-  </section>
+    <section data-testid="test-about-goals">
+      <h2>Goals in this Program</h2>
+      <p>1. Strengthen my practical skills in Frontend Development through hands-on tasks and real-world projects.</p>
+      <p>2. Design and develop responsive, accessible, and user-friendly web applications that meet professional standards.</p>
+      <p>3. Build confidence and readiness for future opportunities in tech through continuous learning and mentorship.</p>
+      <p>4. Gain deeper experience using modern web technologies such as HTML, CSS, JavaScript, and React.</p>
+      <p>5. Collaborate effectively with mentors and teammates while improving problem-solving abilities.</p>
+    </section>
 
-  <section>
-    <h2>Goals in this Program</h2>
-    <p>1. Strengthen my practical skills in Frontend Development through hands-on tasks and real-world projects.</p>
-    <p>2. Design and develop responsive, accessible, and user-friendly web applications that meet professional standards.</p>
-    <p>3. Build confidence and readiness for future opportunities in tech through continuous learning and mentorship.</p>
-    <p>4. Gain deeper experience using modern web technologies such as HTML, CSS, JavaScript, and React.</p>
-    <p>5. Collaborate effectively with mentors and teammates while improving problem-solving abilities.</p>
-  </section>
+    <section data-testid="test-about-confidence">
+      <h2>Areas of Low Confidence</h2>
+      <p>Responsive design with frameworks like Bootstrap.</p>
+      <p>Advanced JavaScript concepts (ES6+, async/await, closures).</p>
+      <p>Integrating APIs and handling dynamic data.</p>
+      <p>Improving UI design (layout, color theory, typography).</p>
+      <p>UX principles for smoother user experience.</p>
+    </section>
 
-  <section>
-    <h2>Areas of Low Confidence</h2>
-    <p>Responsive design with frameworks like Bootstrap.</p>
-    <p>Advanced JavaScript concepts (ES6+, async/await, closures).</p>
-    <p>Integrating APIs and handling dynamic data.</p>
-    <p>Improving UI design (layout, color theory, typography).</p>
-    <p>UX principles for smoother user experience.</p>
-  </section>
+    <section data-testid="test-about-future-note">
+      <h2>Note to Future Self</h2>
+      <p>Keep learning, stay curious, and embrace every challenge. Every line of code brings you closer to your dreams. Stay focused, keep improving, and never forget why you started.</p>
+    </section>
 
-  <section>
-    <h2>Note to Future Self</h2>
-    <p>Keep learning, stay curious, and embrace every challenge. Every line of code brings you closer to your dreams. Stay focused, keep improving, and never forget why you started.</p>
-  </section>
-
-  <section>
-    <h2>Extra Thoughts</h2>
-    <p>I’m grateful for this learning experience. Each stage helps me grow as a developer and strengthens my confidence in solving real-world challenges.</p>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 HNG Frontend Internship</p>
-</footer>
-
-<script src="script.js"></script>
+    <section data-testid="test-about-extra">
+      <h2>Extra Thoughts</h2>
+      <p>I’m grateful for this learning experience. Each stage helps me grow as a developer and strengthens my confidence in solving real-world challenges.</p>
+    </section>
+    <footer>
+    <p>© 2025 HNG Frontend Internship</p>
+  </footer>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
