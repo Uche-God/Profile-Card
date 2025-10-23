@@ -1,16 +1,29 @@
-/* === Body === */
+/* General Styles */
 body {
+  font-family: 'Sora', serif;
+  background: #8F73F2;
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #8F73F2;
-  color: #222;
+  padding: 0;
+  color: #20284B;
 }
 
-/* === Header === */
+h1, h2, h3 {
+  color: #20284B;
+}
+
+p {
+  color: #20284B;
+  background-color: #DED9F6;
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
   background-color: #8F73F2;
   color: #fff;
-  padding: 25px 40px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,18 +33,16 @@ header {
 header h1 {
   margin: 0;
   color: #20284B;
-  font-size: 20px;
+  font-size: 24px;
 }
 
-h2 { font-weight: 200; }
-
-/* === Hamburger Button === */
+/* Hamburger Menu */
 .menu-btn {
-  width: 30px;
-  height: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 30px;
+  height: 22px;
   background: none;
   border: none;
   cursor: pointer;
@@ -46,28 +57,33 @@ h2 { font-weight: 200; }
   transition: all 0.3s ease;
 }
 
-.menu-btn.active .bar:nth-child(1){ transform: rotate(45deg) translate(5px,5px); }
-.menu-btn.active .bar:nth-child(2){ opacity: 0; }
-.menu-btn.active .bar:nth-child(3){ transform: rotate(-45deg) translate(6px,-6px); }
+.menu-btn.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
 
-/* === Navigation Menu === */
+.menu-btn.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Navigation Menu */
 .nav-links {
-  max-height: 0;
-  overflow: hidden;
+  display: none;
   position: absolute;
   top: 70px;
   right: 25px;
   background-color: #20284B;
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 20px 30px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-  z-index: 999;
+  transition: all 0.3s ease;
 }
 
 .nav-links.active {
-  max-height: 500px;
-  padding: 10px 20px;
+  display: block;
   animation: fadeIn 0.3s ease forwards;
 }
 
@@ -78,8 +94,114 @@ h2 { font-weight: 200; }
 }
 
 .nav-links ul li {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .nav-links ul li a {
-  color: #E7E4F
+  text-decoration: none;
+  color: #E7E4F7;
+  font-weight: 200;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #8F73F2;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Body / Main Content */
+.card-body {
+  background-color: #DED9F6;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 750px;
+  margin: 100px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #20284B;
+  text-align: center;
+}
+
+/* Contact Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #20284B;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: 'Sora', serif;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background-color: #8F73F2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #20284B;
+}
+
+/* Error & Success Messages */
+.error {
+  color: #D9534F;
+  font-size: 14px;
+  text-align: left;
+}
+
+.success {
+  color: #28A745;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #20284B;
+  padding: 20px;
+  background: #DED9F6;
+  border-top: 1px solid #20284B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  .card-body {
+    margin: 80px 10px;
+    padding: 20px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
