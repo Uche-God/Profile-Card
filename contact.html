@@ -5,53 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <h1>Contact Us</h1>
+    <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-<header>
-  <h1>Contact Us</h1>
-  <button class="menu-btn" id="menu-btn">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <nav class="nav-links" id="nav-links">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
+  <main class="card-body">
+    <form id="contact-form" novalidate>
+      <div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" data-testid="test-contact-name" required>
+        <small id="test-contact-error-name" class="error"></small>
+      </div>
 
-<div class="card-body">
-  <h2>Send Us a Message</h2>
-  <form id="contactForm">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required />
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" data-testid="test-contact-email" required>
+        <small id="test-contact-error-email" class="error"></small>
+      </div>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Enter your email" required />
+      <div>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" data-testid="test-contact-subject" required>
+        <small id="test-contact-error-subject" class="error"></small>
+      </div>
 
-    <label for="subject">Subject</label>
-    <input type="text" id="subject" placeholder="Enter your subject" required />
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" data-testid="test-contact-message" required minlength="10"></textarea>
+        <small id="test-contact-error-message" class="error"></small>
+      </div>
 
-    <label for="message">Message</label>
-    <textarea id="message" placeholder="Write something..." required></textarea>
+      <button type="submit" data-testid="test-contact-submit">Submit</button>
+      <p id="test-contact-success" class="success-message" style="display:none;">Your message has been sent successfully!</p>
+    </form>
+  </main>
 
-    <button type="submit">Submit</button>
-  </form>
-
-  <p id="success-message" class="success" style="display:none;">
-    ✅ Thank you! Your message has been sent successfully.
-  </p>
-</div>
-
-<footer>
-  <p>© 2025 HNG Frontend Internship</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
