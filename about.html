@@ -1,240 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Sora', serif;
-      background: #8F73F2;
-      margin: 0;
-      padding: 0;
-      color: #20284B;
-    }
-
-    h2 {
-      color: #20284B;
-    }
-
-    p {
-      color: #20284B;
-      background-color: #DED9F6;
-      padding: 10px;
-      border-radius: 8px;
-      line-height: 1.6;
-    }
-
-    /* Header */
-    header {
-      background-color: #8F73F2;
-      color: #fff;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #20284B;
-      font-size: 24px;
-    }
-
-    /* Hamburger Button */
-    .menu-btn {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 22px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    .menu-btn .bar {
-      height: 4px;
-      width: 100%;
-      background-color: #20284B;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    .menu-btn.active .bar:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-btn.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .menu-btn.active .bar:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    /* Navigation Menu */
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 70px;
-      right: 25px;
-      background-color: #20284B;
-      border-radius: 10px;
-      padding: 20px 30px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-    }
-
-    .nav-links.active {
-      display: block;
-      animation: fadeIn 0.3s ease forwards;
-    }
-
-    .nav-links ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .nav-links ul li {
-      margin: 15px 0;
-    }
-
-    .nav-links ul li a {
-      text-decoration: none;
-      color: #E7E4F7;
-      font-weight: 200;
-      font-size: 16px;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links ul li a:hover {
-      color: #8F73F2;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Card Body */
-    .card-body {
-      background-color: #DED9F6;
-      padding: 30px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 750px;
-      margin: 100px auto;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-      border: 1px solid #20284B;
-      text-align: center;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      color: #20284B;
-      padding: 20px;
-      background: #DED9F6;
-      border-top: 1px solid #20284B;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      header {
-        padding: 15px 20px;
-      }
-
-      .card-body {
-        margin: 80px 10px;
-        padding: 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>About Me</h1>
+<header>
+  <h1>About Me</h1>
+  <button class="menu-btn" id="menu-btn">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-    <!-- Hamburger Button -->
-    <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+  <nav class="nav-links" id="nav-links">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Navigation Menu -->
-    <nav class="nav-links" id="nav-links">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+<main class="card-body">
+  <section>
+    <h2>Bio</h2>
+    <p>I'm Anioke Uchenna, a creative Frontend Developer who enjoys turning ideas into smooth, responsive, and visually amazing web experiences.</p>
+    <p>I love exploring modern web technologies, UI/UX design, and finding better ways to make the web more interactive and enjoyable.</p>
+    <p>My journey began with curiosity for how websites work. Now I build with HTML, CSS, JavaScript, and React — always eager to learn and create something exceptional.</p>
+  </section>
 
-  <!-- Main Content -->
-  <main class="card-body" data-testid="test-about-page">
-    <section data-testid="test-about-bio">
-      <h2>Bio</h2>
-      <p>I'm Anioke Uchenna, a creative Frontend Developer who enjoys turning ideas into smooth, responsive, and visually amazing web experiences.</p>
-      <p>I love exploring modern web technologies, UI/UX design, and finding better ways to make the web more interactive and enjoyable.</p>
-      <p>My journey began with curiosity for how websites work. Now I build with HTML, CSS, JavaScript, and React — always eager to learn and create something exceptional.</p>
-    </section>
+  <section>
+    <h2>Goals in this Program</h2>
+    <p>1. Strengthen my practical skills in Frontend Development through hands-on tasks and real-world projects.</p>
+    <p>2. Design and develop responsive, accessible, and user-friendly web applications that meet professional standards.</p>
+    <p>3. Build confidence and readiness for future opportunities in tech through continuous learning and mentorship.</p>
+    <p>4. Gain deeper experience using modern web technologies such as HTML, CSS, JavaScript, and React.</p>
+    <p>5. Collaborate effectively with mentors and teammates while improving problem-solving abilities.</p>
+  </section>
 
-    <section data-testid="test-about-goals">
-      <h2>Goals in this Program</h2>
-      <p>1. Strengthen my practical skills in Frontend Development through hands-on tasks and real-world projects.</p>
-      <p>2. Design and develop responsive, accessible, and user-friendly web applications that meet professional standards.</p>
-      <p>3. Build confidence and readiness for future opportunities in tech through continuous learning and mentorship.</p>
-      <p>4. Gain deeper experience using modern web technologies such as HTML, CSS, JavaScript, and React.</p>
-      <p>5. Collaborate effectively with mentors and teammates while improving problem-solving abilities.</p>
-    </section>
+  <section>
+    <h2>Areas of Low Confidence</h2>
+    <p>Responsive design with frameworks like Bootstrap.</p>
+    <p>Advanced JavaScript concepts (ES6+, async/await, closures).</p>
+    <p>Integrating APIs and handling dynamic data.</p>
+    <p>Improving UI design (layout, color theory, typography).</p>
+    <p>UX principles for smoother user experience.</p>
+  </section>
 
-    <section data-testid="test-about-confidence">
-      <h2>Areas of Low Confidence</h2>
-      <p>Responsive design with frameworks like Bootstrap.</p>
-      <p>Advanced JavaScript concepts (ES6+, async/await, closures).</p>
-      <p>Integrating APIs and handling dynamic data.</p>
-      <p>Improving UI design (layout, color theory, typography).</p>
-      <p>UX principles for smoother user experience.</p>
-    </section>
+  <section>
+    <h2>Note to Future Self</h2>
+    <p>Keep learning, stay curious, and embrace every challenge. Every line of code brings you closer to your dreams. Stay focused, keep improving, and never forget why you started.</p>
+  </section>
 
-    <section data-testid="test-about-future-note">
-      <h2>Note to Future Self</h2>
-      <p>Keep learning, stay curious, and embrace every challenge. Every line of code brings you closer to your dreams. Stay focused, keep improving, and never forget why you started.</p>
-    </section>
-    <section data-testid="test-about-extra">
-  <h2>Extra Thoughts</h2>
-  <p>I’m grateful for this learning experience. Each stage helps me grow as a developer and strengthens my confidence in solving real-world challenges.</p>
-</section>
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 HNG Frontend Internship</p>
-  </footer>
+  <section>
+    <h2>Extra Thoughts</h2>
+    <p>I’m grateful for this learning experience. Each stage helps me grow as a developer and strengthens my confidence in solving real-world challenges.</p>
+  </section>
+</main>
 
-  <!-- JavaScript -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const menuBtn = document.getElementById("menu-btn");
-      const navLinks = document.getElementById("nav-links");
+<footer>
+  <p>© 2025 HNG Frontend Internship</p>
+</footer>
 
-      menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        menuBtn.classList.toggle("active"); // Animate bars to X
-      });
-    });
-  </script>
-  </main>
+<script src="script.js"></script>
 </body>
 </html>
