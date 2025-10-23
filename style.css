@@ -38,7 +38,7 @@ header h1 {
 .menu-btn .bar {
   height: 4px;
   width: 100%;
-  background-color: #DED9F6;
+  background-color: #20284B;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -61,7 +61,7 @@ header h1 {
   position: absolute;
   top: 70px;
   right: 25px;
-  background-color: #DED9F6;
+  background-color: #20284B;
   border-radius: 10px;
   padding: 20px 30px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
