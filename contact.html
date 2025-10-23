@@ -1,266 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-  body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: #8F73F2;
-    color: #222;
-  }
-
-  header {
-    background-color: #8F73F2;
-    color: #fff;
-    padding: 25px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-
-  header h1 {
-    margin: 0;
-    color: #20284B;
-    font-size: 20px;
-  }
-
-  h2 { font-weight: 200; }
-
-  .menu-btn {
-    width: 30px;
-    height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .menu-btn .bar {
-    height: 4px;
-    width: 100%;
-    background-color: #20284B;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .menu-btn.active .bar:nth-child(1){ transform: rotate(45deg) translate(5px,5px); }
-  .menu-btn.active .bar:nth-child(2){ opacity: 0; }
-  .menu-btn.active .bar:nth-child(3){ transform: rotate(-45deg) translate(6px,-6px); }
-
-  .nav-links {
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 70px;
-    right: 25px;
-    background-color: #20284B;
-    border-radius: 10px;
-    padding: 0 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    max-height: 500px;
-    padding: 10px 20px;
-    animation: fadeIn 0.3s ease forwards;
-  }
-
-  .nav-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-links ul li {
-    margin: 10px 0;
-  }
-
-  .nav-links ul li a {
-    color: #E7E4F7;
-    text-decoration: none;
-    font-weight: 200;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links ul li a:hover{ color: #8F73F2; }
-
-  @keyframes fadeIn {
-    0% { opacity:0; transform:translateY(-10px); }
-    100% { opacity:1; transform:translateY(0); }
-  }
-
-  .card-body {
-    background-color: #DED9F6;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    color: #20284B;
-    box-sizing: border-box;
-  }
-
-  .card-body h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #20284B;
-  }
-
-  label {
-    display: block;
-    font-weight: 500;
-    color: #20284B;
-    margin-bottom: 8px;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: none;
-    border-radius: 9px;
-    background-color: #fff;
-    color: #333;
-    margin-bottom: 18px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
-
-  textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-
-  button[type="submit"] {
-    background-color: #20284B;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 15px;
-  }
-
-  button[type="submit"]:hover{ background-color: #8F73F2;}
-
-  @media (min-width: 1200px) {
-    .card-body {
-      max-width: 1000px;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
-  <h1 data-testid="header">Contact Us</h1>
-
-  <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation menu">
+  <h1>Contact Us</h1>
+  <button class="menu-btn" id="menu-btn">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
   </button>
 
-  <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
+  <nav class="nav-links" id="nav-links">
     <ul>
-      <li><a href="index.html" data-testid="home-link">Home</a></li>
-      <li><a href="about.html" data-testid="about-link">About Me</a></li>
-      <li><a href="contact.html" data-testid="contact-link">Contact Us</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 </header>
 
 <div class="card-body">
   <h2>Send Us a Message</h2>
-
-  <form id="contactForm" data-testid="contact-form" novalidate>
+  <form id="contactForm">
     <label for="name">Full Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required data-testid="name" aria-describedby="nameHelp">
-    <small id="nameHelp" style="display:none;color:red;">Please enter your name.</small>
-    
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Enter your email" required data-testid="email" aria-describedby="emailHelp">
-    <small id="emailHelp" style="display:none;color:red;">Please enter a valid email address.</small>
-   
-    <label for="subject">Subject</label>
-    <input type="text" id="subject" placeholder="Enter your subject" required data-testid="subject" aria-describedby="subjectHelp">
-    <small id="subjectHelp" style="display:none;color:red;">Please enter a subject.</small>
-    
-    <label for="message">Message</label>
-    <textarea id="message" placeholder="Write something..." required data-testid="message" aria-describedby="messageHelp"></textarea>
-    <small id="messageHelp" style="display:none;color:red;">Please enter your message.</small>
+    <input type="text" id="name" placeholder="Enter your name" required />
 
-    <button type="submit" data-testid="submit">Submit</button>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" required />
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" placeholder="Enter your subject" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Write something..." required></textarea>
+
+    <button type="submit">Submit</button>
   </form>
 
-  <p id="success-message" class="success" style="display:none;" data-testid="success-message">✅ Thank you! Your message has been sent successfully.</p>
+  <p id="success-message" class="success" style="display:none;">
+    ✅ Thank you! Your message has been sent successfully.
+  </p>
 </div>
 
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const navLinks = document.getElementById('nav-links');
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuBtn.classList.toggle('active');
-  });
+<footer>
+  <p>© 2025 HNG Frontend Internship</p>
+</footer>
 
-  const form = document.getElementById('contactForm');
-  const successMessage = document.getElementById('success-message');
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const subject = document.getElementById('subject');
-    const message = document.getElementById('message');
-
-    let valid = true;
-
-    if (!name.value.trim()) {
-      document.getElementById('nameHelp').style.display = 'block';
-      valid = false;
-    } else {
-      document.getElementById('nameHelp').style.display = 'none';
-    }
-
-    if (!email.validity.valid) {
-      document.getElementById('emailHelp').style.display = 'block';
-      valid = false;
-    } else {
-      document.getElementById('emailHelp').style.display = 'none';
-    }
-
-    if (!subject.value.trim()) {
-      document.getElementById('subjectHelp').style.display = 'block';
-      valid = false;
-    } else {
-      document.getElementById('subjectHelp').style.display = 'none';
-    }
-
-    if (!message.value.trim()) {
-      document.getElementById('messageHelp').style.display = 'block';
-      valid = false;
-    } else {
-      document.getElementById('messageHelp').style.display = 'none';
-    }
-
-    if (valid) {
-      successMessage.style.display = 'block';
-      form.reset();
-    }
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
